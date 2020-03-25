@@ -1,0 +1,16 @@
+{
+  "name": "365datascience",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "I don't want to associate myself with this",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv-defaults": "^1.1.1",
+    "puppeteer": "^2.1.1"
+  }
+}
