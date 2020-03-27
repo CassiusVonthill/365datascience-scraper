@@ -4,8 +4,20 @@ const fs = require('fs')
 const sanitize = require("sanitize-basename")
 
 const loginPage = {
-  username: process.env.EMAIL,
-  password: process.env.PASS
+  username: process.env.EMAIL || 'REPLACE_WITH_USERNAME',
+  password: process.env.PASS || 'REPLACE_WITH_PASSWORD'
+}
+
+// Check if login details have been provided.
+if (
+    loginPage.username == 'REPLACE_WITH_USERNAME' ||
+    loginPage.password == 'REPLACE_WITH_PASSWORD'
+  ) {
+    console.log(
+      'You need to provide the login details for your 365datascience account.',
+      '\nEdit the login details in the .env file.',
+    );
+    process.exit(1);
 }
 
 function sleep(ms) {
@@ -30,7 +42,19 @@ async function Download_365DS() {
       document.querySelector('input[type=submit]').click();
     });
 
-    console.log("Logged in!")
+    // Check if the browser could successfully login with the creds.
+    await page.waitForNavigation();
+
+    if (await page.$('.course-listing') !== null) {
+      console.log("Logged in!");
+
+    } else {
+      console.log(
+        'Could not login.',
+        '\nCheck that the credentials provided in .evn are correct.'
+      );
+      process.exit(1);
+    }
 
     // Get course url stubs so we can iterate through courses
     await page.waitForSelector('div.course-listing')
