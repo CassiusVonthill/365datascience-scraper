@@ -7,8 +7,8 @@
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "I don't want to associate myself with this",
-  "license": "ISC",
+  "author": "Casius Vonthill",
+  "license": "MIT",
   "dependencies": {
     "dotenv-defaults": "^1.1.1",
     "puppeteer": "^2.1.1",
