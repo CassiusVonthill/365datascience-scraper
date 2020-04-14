@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "dotenv-defaults": "^1.1.1",
+    "getopts": "^2.2.5",
     "puppeteer": "^2.1.1",
     "sanitize-basename": "^1.0.0"
   }
