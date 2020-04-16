@@ -1,5 +1,12 @@
 # 365datascience-scraper
 
+# DEPRECIATED
+The promot time for the website has ended so scraping all the courses is no longer possible (even with previously made accounts). I apologize that I wasn't able to get document downloads working. 
+
+Unless a promo is opened up (and even then it's unlikely) I will not be updating this program any longer. Feel free to fork.
+
+---
+
 Credits for original script bases goes to [Adam Kearn](https://www.reddit.com/user/Adam_Kearn)
 
 ## Usage
